@@ -13,10 +13,18 @@ public class ExempleDUtilisation {
 
     public void exemple() {
         Bandeau monBandeau = new Bandeau();
+        Bandeau monBandeau2 = new Bandeau();
         Font font = monBandeau.getFont();
         Color back = monBandeau.getBackground();
         Color fore = monBandeau.getForeground();
 
+        Scenario s1 = new Scenario();
+        Effet r1 = new Rotation();
+        s1.addEffet(r1,3);
+
+        s1.playScenario();
+
+        /*
         monBandeau.setMessage("Hello");
         monBandeau.sleep(1000);
         monBandeau.setMessage("On va changer de police");
@@ -57,5 +65,6 @@ public class ExempleDUtilisation {
         monBandeau.setMessage("Terminé");
         monBandeau.sleep(3000);
         monBandeau.close();
+        */
     }
 }
