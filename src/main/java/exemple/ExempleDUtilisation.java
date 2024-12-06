@@ -21,6 +21,8 @@ public class ExempleDUtilisation {
         Scenario s1 = new Scenario();
         Effet r1 = new Rotation();
         s1.addEffet(r1,3);
+        s1.ajouterBandeau(monBandeau);
+        s1.ajouterBandeau(monBandeau2);
 
         s1.playScenario();
 
