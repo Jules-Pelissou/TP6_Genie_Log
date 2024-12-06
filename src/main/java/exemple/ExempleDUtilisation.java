@@ -12,15 +12,20 @@ public class ExempleDUtilisation {
     }
 
     public void exemple() {
+
         Bandeau monBandeau = new Bandeau();
         Bandeau monBandeau2 = new Bandeau();
-        Font font = monBandeau.getFont();
-        Color back = monBandeau.getBackground();
-        Color fore = monBandeau.getForeground();
 
         Scenario s1 = new Scenario();
         Effet r1 = new Rotation();
+        Effet cf1 = new CouleurFont();
+        Effet z1 = new Zoom("test");
+
+
         s1.addEffet(r1,3);
+        s1.addEffet(cf1,1);
+        s1.addEffet(z1,2);
+
         s1.ajouterBandeau(monBandeau);
         s1.ajouterBandeau(monBandeau2);
 
@@ -67,6 +72,7 @@ public class ExempleDUtilisation {
         monBandeau.setMessage("Terminé");
         monBandeau.sleep(3000);
         monBandeau.close();
-        */
+         */
+
     }
 }

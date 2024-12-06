@@ -52,11 +52,16 @@ public class Scenario {
         }
     }
 
-    public void playScenario(){
-        for (HashMap.Entry<Effet,Integer> entry : listeEffet.entrySet())
-            for (int i = 0; i < bandeauUtilises.size(); i++){
-                entry.getKey().applyEffect(bandeauUtilises.get(i));
+    public void playScenario() {
+        for (HashMap.Entry<Effet, Integer> entry : listeEffet.entrySet()) {
+            Effet effet = entry.getKey();
+            int repetitions = entry.getValue();
+            for (int i = 0; i < repetitions; i++) {
+                for (Bandeau bandeau : bandeauUtilises) {
+                    effet.applyEffect(bandeau);
+                }
             }
+        }
     }
 
     // Méthodes pour les bandeaux
